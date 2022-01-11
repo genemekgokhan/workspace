@@ -1,0 +1,124 @@
+09:52:01 **** Incremental Build of configuration Debug for project blink ****
+make -j4 all 
+arm-none-eabi-size   blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4468	     20	   1572	   6060	   17ac	blink.elf
+Finished building: default.size.stdout
+ 
+09:56:22 **** Incremental Build of configuration Debug for project blink ****
+make -j4 all 
+arm-none-eabi-size   blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4468	     20	   1572	   6060	   17ac	blink.elf
+Finished building: default.size.stdout
+ 
+10:00:43 **** Incremental Build of configuration Debug for project blink ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "blink.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\gokhan.tekinok\Desktop\blink\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: blink.elf
+ 
+arm-none-eabi-size   blink.elf 
+arm-none-eabi-objdump -h -S  blink.elf  > "blink.list"
+arm-none-eabi-objcopy  -O binary  blink.elf  "blink.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4584	     20	   1572	   6176	   1820	blink.elf
+Finished building: default.size.stdout
+ 
+Finished building: blink.bin
+Finished building: blink.list
+ 
+ 
+10:21:25 **** Incremental Build of configuration Debug for project blink ****
+make -j4 all 
+arm-none-eabi-size   blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4584	     20	   1572	   6176	   1820	blink.elf
+Finished building: default.size.stdout
+ 
+10:21:25 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "button.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\gokhan.tekinok\Desktop\button\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: button.elf
+ 
+arm-none-eabi-size   button.elf 
+arm-none-eabi-objdump -h -S  button.elf  > "button.list"
+arm-none-eabi-objcopy  -O binary  button.elf  "button.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4612	     20	   1572	   6204	   183c	button.elf
+Finished building: default.size.stdout
+ 
+Finished building: button.bin
+Finished building: button.list
+ 
+ 
+10:21:44 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-size   button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4612	     20	   1572	   6204	   183c	button.elf
+Finished building: default.size.stdout
+ 
+10:22:55 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-size   button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4612	     20	   1572	   6204	   183c	button.elf
+Finished building: default.size.stdout
+ 
+10:22:55 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-size   button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4612	     20	   1572	   6204	   183c	button.elf
+Finished building: default.size.stdout
+ 
+10:24:41 **** Incremental Build of configuration Debug for project blink ****
+make -j4 all 
+arm-none-eabi-size   blink.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4584	     20	   1572	   6176	   1820	blink.elf
+Finished building: default.size.stdout
+ 
+10:24:41 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "button.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\gokhan.tekinok\Desktop\button\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: button.elf
+ 
+arm-none-eabi-size   button.elf 
+arm-none-eabi-objdump -h -S  button.elf  > "button.list"
+arm-none-eabi-objcopy  -O binary  button.elf  "button.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4636	     20	   1572	   6228	   1854	button.elf
+Finished building: default.size.stdout
+ 
+Finished building: button.bin
+Finished building: button.list
+ 
+ 
+10:24:49 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-size   button.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4636	     20	   1572	   6228	   1854	button.elf
+Finished building: default.size.stdout
+ 
+10:26:33 **** Incremental Build of configuration Debug for project button ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "button.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\gokhan.tekinok\Desktop\button\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="button.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: button.elf
+ 
+arm-none-eabi-size   button.elf 
+arm-none-eabi-objdump -h -S  button.elf  > "button.list"
+arm-none-eabi-objcopy  -O binary  button.elf  "button.bin"
+   text	   data	    bss	    dec	    hex	filename
+   4636	     20	   1572	   6228	   1854	button.elf
+Finished building: default.size.stdout
+ 
+Finished building: button.bin
+Finished building: button.list
+ 
+ 
