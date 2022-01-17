@@ -31,6 +31,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
+
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -49,6 +53,26 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
 
+static void clock(void)
+{
+   CLK_HIGH;
+   CLK_LOW;
+}
+
+static void latch(void)
+{
+    LAT_HIGH;
+    LAT_LOW;
+}
+
+
+
+	void mbi1_init(void){
+
+		mbi1=
+
+
+	}
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -95,9 +119,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
-
-
+	  	HAL_GPIO_WritePin(M_DAT_GPIO_Port, M_DAT_Pin,GPIO_PIN_SET);
+	  	HAL_GPIO_WritePin(M_OE_GPIO_Port, M_OE_Pin, GPIO_PIN_RESET);
+	  	HAL_GPIO_WritePin(M_CLK_GPIO_Port, M_CLK_Pin,GPIO_PIN_SET);
+	  	HAL_GPIO_WritePin(M_LAT_GPIO_Port, M_LAT_Pin, GPIO_PIN_SET);
 
   }
   /* USER CODE END 3 */
@@ -136,6 +161,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+  HAL_RCC_MCOConfig(RCC_MCO, RCC_MCO1SOURCE_SYSCLK, RCC_MCODIV_1);
 }
 
 /**
@@ -148,6 +174,7 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOD_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
 
@@ -156,6 +183,12 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PA8 */
+  GPIO_InitStruct.Pin = GPIO_PIN_8;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
